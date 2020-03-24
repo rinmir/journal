@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+    <title>Journal</title>
+</head>
+<body class="bg-white" onload="loadTable('marks')">    
+    <div class="container-lg">
+        <header class="container border border-top-0 border-primary rounded-bottom bg-light">
+            <nav class="nav nav-pills">
+                <a class="nav-link active" href="marks.html">Журнал</a>
+                <a class="nav-link" href="disciplines.html">Страница школьных предметов</a>
+                <a class="nav-link" href="pupils.html">Страница учеников</a>
+              </nav>
+        </header>
+
+        <main class="container border border-bottom-0 border-primary rounded-top bg-light">    
+            <h2 class="display-4">Журнал</h2>
+
+            <div class="row">
+                <table class="table table-bordered table-responsive table-hover" id="mainTable">
+                    <thead class="thead-light">
+                    </thead>
+                    <tbody>                        
+                    </tbody>
+                </table>              
+        </main>
+
+        <div class="modal fade" id="editing" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title" id="editing">
+                            <h5>Оценки ученика</h5>
+                            <div class="text-primary" id="names"></div>
+                        </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="border border-primary rounded" id="editingForm">
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group" role="group">
+                    <button type="submit" form="editingForm" class="btn btn-success" form="editingForm">Сохранить</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="progress" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title" id="progress">
+                            <h5>График успеваемости</h5>
+                            <div class="text-primary" id="names"></div>
+                        </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table bg-info table-light table-responsive">
+                        <tr>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>   
+    <script src="js/bootstrap.bundle.js"></script> 
+    <script src="js/script.js"></script> 
+</body>
+</html>

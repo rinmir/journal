@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+    <title>Journal</title>
+</head>
+<body class="bg-white" onload="loadTable('pupils')">    
+    <div class="container-lg">
+        <header class="container border border-top-0 border-primary rounded-bottom bg-light">
+            <nav class="nav nav-pills">
+                <a class="nav-link" href="marks.html">Журнал</a>
+                <a class="nav-link" href="disciplines.html">Страница школьных предметов</a>
+                <a class="nav-link active" href="pupils.html">Страница учеников</a>
+              </nav>
+        </header>
+
+        <main class="container border border-bottom-0 border-primary rounded-top bg-light">    
+            <h2 class="display-4">Страница учеников</h2>
+            <form class="border border-primary rounded" onsubmit="addToTable('pupils')">
+                <div class="row">
+                    <div class="form-group d-inline col-3">
+                        <label for="surname">Фамилия</label>
+                        <input type="text" class="form-control" id="surname" pattern="^[А-Яа-яЁё\s]+$" required>
+                    </div>
+                    <div class="form-group d-inline col-3">
+                        <label for="firstname">Имя</label>
+                        <input type="text" class="form-control" id="firstname" pattern="^[А-Яа-яЁё\s]+$" required>
+                    </div>
+                    <div class="form-group d-inline col-3">
+                        <label for="middlename">Отчество</label>
+                        <input type="text" class="form-control" id="middlename" pattern="^[А-Яа-яЁё\s]+$">
+                    </div>            
+                </div>
+                <input type="submit" class="btn btn-primary" value="Добавить">  
+            </form>
+
+            <table class="table table-striped" id="mainTable">
+                <thead>
+                    <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">Фамилия</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Отчество</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>   
+            
+            <p class="text-center text-danger col-6" id = "emptyWarning" style="font-size:xx-large;">Добавте учеников</p>
+        </main>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>   
+    <script src="js/bootstrap.bundle.js"></script> 
+    <script src="js/script.js"></script> 
+</body>
+</html>
